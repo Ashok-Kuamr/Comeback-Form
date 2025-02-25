@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comeback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="step1">
+        <h1>Comeback Form</h1>
+        <p>Fill in the details to prepare your ultimate comeback!</p>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="nickname" placeholder="Your Nickname">
+        <input type="date" id="dob" placeholder="Your Date of Birth">
+        <input type="tel" id="phone" placeholder="Your Mobile Number">
+        <input type="text" id="address" placeholder="Your Address">
+        <input type="text" id="comeback" placeholder="Why You Want to do Comeback">
+        <button onclick="checkComeback()">Submit</button>
+        <div class="result" id="result"></div>
+    </div>
+    
+    <div class="container" id="puzzleChallenge" style="display: none;">
+        <h1>Final Challenge</h1>
+        <p>Solve this puzzle to proceed:</p>
+        <p>What comes next in the sequence? 2, 4, 8, 16, __</p>
+        <input type="text" id="puzzleAnswer" placeholder="Your Answer">
+        <button onclick="checkPuzzle()">Submit Answer</button>
+    </div>
+    
+    <div class="container" id="confirmation" style="display: none;">
+        <h1>Confirmation Letter</h1>
+        <p>Your comeback is scheduled for: <span id="comebackDate"></span></p>
+        <p>Funny Comeback Idea: <span id="comebackIdea"></span></p>
+        <button onclick="generateOfferLetter()">Proceed to Offer Letter</button>
+    </div>
+
+    <div class="container" id="offerLetter" style="display: none;">
+        <h1>Offer Letter</h1>
+        <p>Congratulations! Your comeback is official.</p>
+        <p>Comeback Date: <span id="finalComebackDate"></span></p>
+        <button onclick="showFeedbackForm()">Submit & Give Feedback</button>
+    </div>
+
+    <div class="container" id="feedback" style="display: none;">
+        <h1>Feedback Form</h1>
+        <p>How was your comeback experience?</p>
+        <select id="feedbackResponse">
+            <option value="positive">Awesome! 😍</option>
+            <option value="negative">Not good 😞</option>
+        </select>
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
